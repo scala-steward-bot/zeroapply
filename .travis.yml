@@ -8,7 +8,7 @@ scala:
 sudo: false
 
 jdk:
-  - openjdk8
+  - openjdk13
 
 cache:
   directories:
@@ -23,8 +23,3 @@ script:
 before_cache:
   - find $HOME/.ivy2/cache -name "ivydata-*.properties" | xargs rm
   - find $HOME/.ivy2/cache -name "*SNAPSHOT*" | xargs rm -rf
-
-matrix:
-  include:
-  - jdk: openjdk11
-    scala: 2.12.8
